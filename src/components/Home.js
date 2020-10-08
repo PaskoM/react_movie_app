@@ -20,7 +20,7 @@ import { useHomeFetch } from './hooks/useHomeFetch';
 
 const Home = () => {
     
-    const [{ state, loading, error }, fetchMovies] = useHomeFetch
+    const [{ state, loading, error }, fetchMovies] = useHomeFetch();
 
     return (
     <>
