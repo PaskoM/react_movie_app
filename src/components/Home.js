@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+    API_URL,
+    API_KEY,
+    API_BASE_URL,
+    POSTER_SIZE,
+    BACKDROP_SIZE
+} from '../config';
 
 //import Components 
 import HeroImage from './elements/HeroImage';
