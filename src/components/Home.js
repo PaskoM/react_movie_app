@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import {
-    API_URL,
-    API_KEY,
     POPULAR_BASE_URL,
     SEARCH_BASE_URL,
     POSTER_SIZE,
@@ -57,14 +55,16 @@ const Home = () => {
     if (!movies[0]) return <Spinner />;
 
     return (
-    <>
-            <HeroImage
-                image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${heroImage.backdrop_path}`}
-                title = {
-                    heroImage.original_title
-                }
-                text={heroImage.overview}
-            />
+        <>
+            {!searchTerm && (
+                <HeroImage
+                    image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${heroImage.backdrop_path}`}
+                    title={
+                        heroImage.original_title
+                    }
+                    text={heroImage.overview}
+                />
+            )}
             <SearchBar callback={searchMovies} />
             <Grid header={searchTerm ? 'Search Result' : 'Popular Movies'}>
                 {movies.map(movie => (
