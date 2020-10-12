@@ -21,7 +21,7 @@ const Movie = ({ movieId }) => {
     return (
         <>
             <Navigation movie={movie.original_title}/>
-            <MovieInfo />
+            <MovieInfo movie={movie}/>
             <MovieInfoBar />
             <Grid>
                 <Actor />
