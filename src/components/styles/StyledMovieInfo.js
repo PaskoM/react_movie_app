@@ -35,13 +35,13 @@ export const StyledMovieInfo = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     padding: 40px;
-    color: #ffff;
+    color: #fff;
     overflow: hidden;
 
     h1 {
       font-family: 'Abel', sans-serif;
       font-size: 48px;
-      font-color: #ffff;
+      font-color: #fff;
       margin: 0;
 
       @media screen and (max-width: 1000px) {

@@ -13,8 +13,8 @@ import { element } from 'prop-types';
 
 const MovieInfo = ({movie}) => (
     <StyledMovieInfo backdrop={movie.backdrop_path}>
-        <div className="movieinfo-content">
-            <div className="movieinfo-thumb">
+        < div className = "movieinfo-content" >
+            < div className = "movieinfo-thumb" >
                 <MovieThumb
                     image={
                         movie.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}`
@@ -23,17 +23,17 @@ const MovieInfo = ({movie}) => (
                     clickable={false}
                     />
             </div>
-            <div className="movieInfo-text">
+            < div className = "movieinfo-text" >
                 <h1>{movie.title}</h1>
                 <h3>Plot</h3>
                 <p>{movie.overview}</p>
-            <div className="rating-director">
+            < div className = "rating-director" >
                 <div>
                     <h3>IMDB RATING</h3>
-                    <div className="score">
+                    < div className = "score" >
                         {movie.vote_average}
                     </div>
-                    <div className="director">
+                    < div className = "director" >
                             <h3>DIRECTOR{movie.directors.lenght > 1 ? 'S' : ''}</h3>
                             {movie.directors.map(element => (
                                 <p key={element.credit_id}>{element.name}</p>
